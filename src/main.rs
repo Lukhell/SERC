@@ -1,3 +1,9 @@
+mod eval;
+
+use eval::Eval;
+
 fn main() {
-    println!("Hello, world!");
+    let mut expr = Eval::new("(+ (* 2 (- 6 3)))".to_string());
+    let res = expr.eval();
+    dbg!(res);
 }
